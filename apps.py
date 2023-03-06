@@ -3,11 +3,12 @@ import ftplib
 import shutil
 import schedule
 import logging
+from pass import my_password
 
 # Define FTP server credentials
 ftp_host = "localhost"
 ftp_user = "admin"
-ftp_password = ""
+ftp_password = my_password
 
 # Define local directory for storing downloaded files
 local_dir = "/Users/danielmulatarancon/Desktop/Documents/HACKING TIME/Brainnest /Week 03/Advance Tasks/Downloaded_files"
@@ -35,7 +36,7 @@ def download_files():
         logging.info("Files transferred successfully")
 
 # Schedule script to run daily at a specific time
-schedule.every().day.at("11:03").do(download_files)
+schedule.every().day.at("11:28").do(download_files)
 
 # Set up logging
 logging.basicConfig(filename="file_transfer.log", level=logging.INFO)
