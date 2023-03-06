@@ -18,7 +18,7 @@ internal_dir = "/Users/danielmulatarancon/Desktop/Documents/HACKING TIME/Brainne
 # Define function to download files from FTP server
 def download_files():
     # Connect to FTP server
-    with ftplib.FTP(ftp_host, ftp_user, ftp_password) as ftp:
+    with ftplib.FTP_TLS(ftp_host, ftp_user, ftp_password) as ftp:
         # List files in FTP directory
         files = ftp.nlst()
         # Check if local directory exists, if not create it
