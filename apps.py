@@ -6,18 +6,18 @@ import logging
 
 
 
-# Define FTP server credentials
+# Defining FTP server credentials
 ftp_host = "ftp.gnu.org"
 ftp_user = "anonymous"
 ftp_password = ""
 
-# Define local directory for storing downloaded files
+# Defining local directory for storing downloaded files
 local_dir = "/Users/danielmulatarancon/Desktop/Documents/HACKING TIME/Brainnest /Week 03/Advance Tasks/Downloaded_files"
 
-# Define internal network directory for storing transferred files
+# Defining internal network directory for storing transferred files
 internal_dir = "/Users/danielmulatarancon/Desktop/Documents/HACKING TIME/Brainnest /Week 03/Advance Tasks/Internal_directory"
 
-# Define function to download files from FTP server
+# Defining a function to download files from the FTP server
 def download_files():
     # Connect to FTP server
     with ftplib.FTP(ftp_host, ftp_user, ftp_password) as ftp:
@@ -43,13 +43,13 @@ def download_files():
         # Log successful transfer
         logging.info("Files transferred successfully")
 
-# Schedule script to run daily at a specific time
+# Scheduling the script to run daily at a specific time
 schedule.every().day.at("16:53").do(download_files)
 
-# Set up logging
+# Setting up logging
 logging.basicConfig(filename="file_transfer.log", level=logging.INFO)
 
-
+# Defining the 'dunder main' block
 if __name__ == '__main__':
     # Start scheduled script
     while True:
