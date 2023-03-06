@@ -5,15 +5,15 @@ import schedule
 import logging
 
 # Define FTP server credentials
-ftp_host = "ftp.example.com"
-ftp_user = "username"
-ftp_password = "password"
+ftp_host = "localhost"
+ftp_user = "admin"
+ftp_password = ""
 
 # Define local directory for storing downloaded files
-local_dir = "/path/to/local/directory"
+local_dir = "/Users/danielmulatarancon/Desktop/Documents/HACKING TIME/Brainnest /Week 03/Advance Tasks/Downloaded_files"
 
 # Define internal network directory for storing transferred files
-internal_dir = "/path/to/internal/network/directory"
+internal_dir = "/Users/danielmulatarancon/Desktop/Documents/HACKING TIME/Brainnest /Week 03/Advance Tasks/Internal_directory"
 
 # Define function to download files from FTP server
 def download_files():
@@ -35,7 +35,7 @@ def download_files():
         logging.info("Files transferred successfully")
 
 # Schedule script to run daily at a specific time
-schedule.every().day.at("10:00").do(download_files)
+schedule.every().day.at("11:03").do(download_files)
 
 # Set up logging
 logging.basicConfig(filename="file_transfer.log", level=logging.INFO)
